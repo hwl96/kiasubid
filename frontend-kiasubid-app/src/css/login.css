@@ -1,0 +1,66 @@
+.login-form{
+    height: 70vh;
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form h2{
+    text-align: center;
+}
+
+.login-form p{
+    text-align: center;
+    font-size: 0.9rem;
+    color: grey;
+    position: relative;
+    bottom: 1rem;
+}
+
+form label{
+    width: 22%;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 545;
+}
+
+.forgot-password{
+    text-align: right;
+    font-size: 0.8rem;
+}
+
+.forgot-password-link{
+    text-decoration: none;
+    color: #29c978;
+    font-weight: bold;
+}
+
+.password-label{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+form{
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="submit"]{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+input[type="email"], input[type="password"]{
+    margin-top: 5px;
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+}
