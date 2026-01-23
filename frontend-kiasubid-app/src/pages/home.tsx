@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import Register from "./register";
 import Login from "./login";
 import Banner from "../components/banner";
+import OtpPage from "./otp";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
         <Route path="/" element={<div>Welcome to KiasuBid Home Page</div>} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/otp" element={<OtpPage />} />
       </Routes>
     </div>
   );
