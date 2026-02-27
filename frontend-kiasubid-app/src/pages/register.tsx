@@ -40,7 +40,7 @@ function Register() {
     setPassword(e.target.value);
     if (!checkPasswordRegex(e.target.value)) {
       e.target.setCustomValidity(
-        "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character."
+        "Password must be at least 8 characters long and include at least one uppercase letter, one lowercase letter, one number, and one special character.",
       );
     } else {
       e.target.setCustomValidity("");
@@ -48,7 +48,7 @@ function Register() {
   };
 
   const handleConfrimPasswordChange = (
-    e: React.ChangeEvent<HTMLInputElement>
+    e: React.ChangeEvent<HTMLInputElement>,
   ) => {
     setConfirmPassword(e.target.value);
     if (e.target.value !== password) {
@@ -59,24 +59,25 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className="parentRegister">
       <div className="register-form">
         <div className="register-form-header">
           <h2>Create Account</h2>
-          <p>Join our community of parents and educators</p>
+          <p>Join our community and connect with our Tutors</p>
         </div>
-        <form onSubmit={handleSubmit}>
-          <label>
+        <form className="register-form-content" onSubmit={handleSubmit}>
+          <label className="register-form-label">
             <span className="form-label">Email:</span>
             <input
               type="email"
               name="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              autoFocus
               required
             />
           </label>
-          <label>
+          <label className="register-form-label">
             <span className="form-label">Password:</span>
             <input
               type="password"
@@ -86,7 +87,7 @@ function Register() {
               required
             />
           </label>
-          <label>
+          <label className="register-form-label">
             <span className="form-label">Confirm Password:</span>
             <input
               type="password"
@@ -99,8 +100,8 @@ function Register() {
           <span className="error-message" style={{ color: "red" }}>
             {error}
           </span>
-          <label>
-            <input type="submit" value="Sign Up" />
+          <label className="register-submit-button">
+            <input type="submit" value="Continue" />
           </label>
         </form>
       </div>

@@ -13,6 +13,10 @@
     width: 40%;
 }
 
+nav{
+    width: 100%;
+}
+
 .nav-link {
   text-decoration: none;
   border: 1px solid #29c978;

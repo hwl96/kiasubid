@@ -9,11 +9,14 @@ function Banner() {
       </Link>
       <div className="navigation-links">
         <nav>
+          <Link to="/catalog" className="nav-link">
+            Our Tutors
+          </Link>
           <Link to="/login" className="nav-link">
-            Login
+            Sign In
           </Link>
           <Link to="/register" className="nav-link">
-            Register
+            Join Us
           </Link>
         </nav>
       </div>

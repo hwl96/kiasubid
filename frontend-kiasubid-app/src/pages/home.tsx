@@ -3,6 +3,7 @@ import Register from "./register";
 import Login from "./login";
 import Banner from "../components/banner";
 import OtpPage from "./otp";
+import Catalog from "./catalog";
 
 function Home() {
   return (
@@ -13,6 +14,7 @@ function Home() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/otp" element={<OtpPage />} />
+        <Route path="/catalog" element={<Catalog />} />
       </Routes>
     </div>
   );

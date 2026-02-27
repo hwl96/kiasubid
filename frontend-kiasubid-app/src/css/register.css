@@ -1,10 +1,19 @@
+.parentRegister{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .register-form{
-    height: 75vh;
-    width: auto;
+    width: 35%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    padding: 1rem;
 }
 
 .register-form h2{
@@ -16,33 +25,30 @@
     font-size: 0.9rem;
     color: grey;
     position: relative;
-    bottom: 1rem;
+    bottom: 0.8rem;
 }
-form label{
-    width: 80%;
+.register-form-content label{
+    width: 100%;
     height:auto;
-    padding: 1rem;
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
 }
 
 .form-label{
-    padding-bottom: 0.1rem;
+    padding-bottom: 0.2rem;
 }
 
-form{
+.register-form-content{
     display: inline-flex;
     flex-direction: column;
-    width: 100%;
+    align-items: center;
+    width: 50%;
 }
 
-.register-form-header{
-    margin-bottom: 2rem;
-}
-
-input[type="submit"]{
+.register-submit-button input[type="submit"]{
     width: 100%;
-    border-radius: 15rem;
+    border-radius: 0.5rem;
     cursor: pointer;
     font-size: 0.9rem;
     height: 2.5rem;
@@ -53,11 +59,12 @@ input[type="submit"]{
     margin-top: 1rem;
 }
 
-input[type="submit"]:hover{
+.register-submit-button input[type="submit"]:hover{
     background-color: #21a86b;
 }
 
-input[type="email"], input[type="password"]{
-    border-radius: 6rem;
-    height: 1.3rem;
+.register-form-label input[type="email"], .register-form-label input[type="password"]{
+    padding: 0.2rem;
+    border-radius: 0.3rem;
+    width:98%;
 }
