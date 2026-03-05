@@ -2,6 +2,8 @@ from fastapi import APIRouter, Depends, HTTPException
 from sqlalchemy.orm import Session
 from passlib.context import CryptContext
 from schemas import UserAlreadyExistsException
+import secrets
+from datetime import datetime, timedelta, timezone
 
 import models, schemas
 from database import get_db
@@ -19,10 +21,15 @@ def register_user(user: schemas.UserCreate, db: Session = Depends(get_db)):
     if db_user:
         raise UserAlreadyExistsException()
     hashed_password = get_password_hash(user.password)
+    otp = secrets.randbelow(900000) + 100000
+    otp_expiry = datetime.now(timezone.utc) + timedelta(seconds=30)
     new_user = models.User(
         email=user.email,
         hashed_password=hashed_password,
-        active=False
+        active=False,
+        otp=otp,
+        otp_last_sent_at=datetime.now(timezone.utc),
+        otp_expires_at=otp_expiry
     )
     db.add(new_user)
     db.commit()
